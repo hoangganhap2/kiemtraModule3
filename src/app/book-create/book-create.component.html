@@ -1,0 +1,11 @@
+<form  (ngSubmit)="onSubmit()" [formGroup]="addReadBook">
+<tr>
+  <td>
+    <input type="text" placeholder="Add book" formControlName="name">
+  </td>
+  <td>
+    <button>Thêm</button>
+  </td>
+</tr>
+</form>
+<a routerLink="/book-read">Danh sách đọc</a>

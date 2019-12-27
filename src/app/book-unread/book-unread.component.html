@@ -1,0 +1,19 @@
+<a routerLink="/book">Về trang chủ</a>
+<form (ngSubmit)="onSubmit()" [formGroup]="removeBook">
+  <table class="table" border="1px">
+    <tr>
+      <h3>Danh sách đã đọc</h3>
+    </tr>
+    <tr *ngFor="let book of bookList">
+      <td *ngIf="!book.read">
+        {{book.name}}
+      </td>
+      <td *ngIf="!book.read">
+        <button (click)="book.read = !book.read">Đọc lại</button>
+      </td>
+    </tr>
+  </table>
+</form>
+<tr>
+  <a routerLink="/book-read">Danh sách đọc</a>
+</tr>
